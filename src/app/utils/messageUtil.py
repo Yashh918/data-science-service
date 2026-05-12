@@ -14,7 +14,7 @@ class MessageUtil:
             "currency": self._extractCurrency(message),
             "amount": self._extractAmount(message),
             "merchant": self._extractMerchant(message),
-            "date": self._extractDate(message)
+            "transaction_date": self._extractDate(message)
         }
     
     def _extractTransactionType(self, message):

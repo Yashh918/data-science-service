@@ -12,20 +12,16 @@ class MessageService:
             return None 
 
         # tier 1 regex
-        print("Running regex now")
         extracted = self.messageUtil.extractExpense(message)
-        print(extracted)
-        if self.messageUtil._confidence(extracted):
-           
+        if self.messageUtil._confidence(extracted):   
             return Expense(
                 amount= extracted["amount"],
                 merchant=extracted["merchant"],
                 currency=extracted["currency"] or "INR",
                 transaction_type=extracted["transaction_type"],
-                date=extracted["date"],
+                transaction_date=extracted["transaction_date"],
             )
 
         # tier 2 llm fallback
-        print("running llm fallback")
         return self.llmService.runLLM(message) 
             
