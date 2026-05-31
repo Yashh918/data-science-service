@@ -1,6 +1,6 @@
-from utils.messageUtil import MessageUtil
-from service.llmService import LLMService
-from schema.expense import Expense
+from app.utils.messageUtil import MessageUtil
+from app.service.llmService import LLMService
+from app.schema.expense import Expense
 
 class MessageService:
     def __init__(self):
