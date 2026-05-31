@@ -1,4 +1,6 @@
 dsenv
-
+*.egg-info/
 __pycache__/
 *.pyc
+dist/
+.env
